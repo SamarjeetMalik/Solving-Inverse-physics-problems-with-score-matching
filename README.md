@@ -45,20 +45,11 @@ evaluate how well the posterior distribution obtained from our method matches th
 
 ![toy_example_thumb](https://github.com/tum-pbs/SMDP/assets/16702943/af589b4d-513f-479b-979d-88cad1b34636)
 
-### Burgers' Equation
-
-In a slightly more involved example, we learn the score field for Burgers' equation. The experiments are located in the folder `burgers-equation`.
-A difficulty here is that the physics is very sensitive to small perturbations. Therefore, the 1-step training of our method is not sufficient to produce
-stable trajectories over longer time horizons. This is why our proposed multi-step training is crucial for this example. <b> Coming soon. </b>
-
 ### Heat Diffusion
 
 In this example, we learn the score field for the stochastic heat diffusion equation. The experiments are located in the folder `heat-diffusion`.  
 As the diffusive nature of the equation destroys information over time, small-scale structures need to be created during inference. 
 This highlights the advanatages of the SDE version of our method, as noise added to the trajectories can be used to create missing details.
-
-![heat_equation_example](https://github.com/tum-pbs/SMDP/assets/16702943/f4bb5200-058a-430e-9c95-ab82fa3016ac)
-
 
 ### Buoyancy-driven Flow with Obstacles
 
@@ -66,12 +57,9 @@ This example is located in the folder `buoyancy-flow`. We learn the score field 
 What makes this experiment challenging is that it involves non-linear physics and randomly placed obstacles for each simulation. 
 This means that the learned score field needs to be able to generalize very well to unseen scenarios.
 
-
-![buoyancy_flow_overview](https://github.com/tum-pbs/SMDP/assets/16702943/b410e0e8-a1e0-47a5-ba07-2f59728aeeea)
-
 ### Isotropic Forced Turbulence
 
 Finally, we learn the score field for isotropic forced turbulence. The experiments are located in the folder `navier-stokes`.
 In this example, we do not have a numerical solver for the forward problem. Instead, we train a (time-independent) neural 
-network for the physics and a (time-dependent) neural network for the score field. <b> Coming soon. </b>
+network for the physics and a (time-dependent) neural network for the score field.
 
