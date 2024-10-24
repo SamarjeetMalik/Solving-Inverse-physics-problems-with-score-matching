@@ -1,14 +1,8 @@
 # Solving Inverse Physics Problems with Score Matching
 
-This repository contains the code for the paper "Solving Inverse Physics Problems with Score Matching" by [Benjamin Holzschuh](https://ge.in.tum.de/about/benjamin-holzschuh/), [Simona Vegetti](https://www.mpa-garching.mpg.de/person/44138/), and [Nils Thuerey](https://ge.in.tum.de/about/n-thuerey/). The paper can be found [here](https://arxiv.org/abs/2301.10250).
+This repository contains the ML implementaion for the paper "Solving Inverse Physics Problems with Score Matching". The paper can be found [here](https://arxiv.org/abs/2301.10250).
 
 
-Our works proposes a novel approach to solve inverse problems involving the temporal evolution of physics systems by leveraging the idea of score matching. The system’s current state is moved backward in time step by step by combining an approximate inverse physics simulator and a learned correction function. A central
-insight of our work is that training the learned correction with a single-step loss is equivalent to a score matching objective, while recursively predicting longer
-parts of the trajectory during training relates to maximum likelihood training of a corresponding probability flow. In the paper, we highlight the advantages of our algorithm compared to standard denoising score matching and implicit score matching, as well as fully learned baselines for a wide range of inverse physics problems. 
-The resulting inverse solver has excellent accuracy and temporal stability and, in contrast to other learned inverse solvers, allows for sampling the posterior of the solutions. 
-
-Feel free to contact us if you have questions or suggestions regarding our work.
 
 ## Method Overview  
 <p align="center">
@@ -80,15 +74,4 @@ This means that the learned score field needs to be able to generalize very well
 Finally, we learn the score field for isotropic forced turbulence. The experiments are located in the folder `navier-stokes`.
 In this example, we do not have a numerical solver for the forward problem. Instead, we train a (time-independent) neural 
 network for the physics and a (time-dependent) neural network for the score field. <b> Coming soon. </b>
-## Citation
 
-If you use our approach or code, please cite our paper:
-
-```
-@article{holzschuh2023smdp,
-  title="{Solving Inverse Physics Problems with Score Matching}",
-  author={Holzschuh, Benjamin and Vegetti, Simona and Thuerey, Nils},
-  journal={Advances in Neural Information Processing Systems},
-  year={2023}
-}
-```
