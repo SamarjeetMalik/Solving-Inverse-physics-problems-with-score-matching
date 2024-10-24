@@ -32,6 +32,8 @@ within the experiment's directory.
 
 This code covers several experiments. Each experiment is located in a separate folder. 
 
+### Toy Problems with Simple SDEs
+
 We learn score fields for 1D-processes with simple SDEs. The experiments are located in the folder `toy-example`. The simple setup allows us to compare the score learned by our method with the analytical score and evaluate how well the posterior distribution obtained from our method matches the true posterior distribution.
 
 ### Heat Diffusion
