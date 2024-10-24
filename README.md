@@ -32,6 +32,8 @@ within the experiment's directory.
 
 This code covers several experiments. Each experiment is located in a separate folder. 
 
+We learn score fields for 1D-processes with simple SDEs. The experiments are located in the folder `toy-example`. The simple setup allows us to compare the score learned by our method with the analytical score and evaluate how well the posterior distribution obtained from our method matches the true posterior distribution.
+
 ### Heat Diffusion
 
 In this example, we learn the score field for the stochastic heat diffusion equation. The experiments are located in the folder `heat-diffusion`.  
@@ -43,10 +45,4 @@ This highlights the advanatages of the SDE version of our method, as noise added
 This example is located in the folder `buoyancy-flow`. We learn the score field for a buoyancy-driven flow with obstacles. 
 What makes this experiment challenging is that it involves non-linear physics and randomly placed obstacles for each simulation. 
 This means that the learned score field needs to be able to generalize very well to unseen scenarios.
-
-### Isotropic Forced Turbulence
-
-Finally, we learn the score field for isotropic forced turbulence. The experiments are located in the folder `navier-stokes`.
-In this example, we do not have a numerical solver for the forward problem. Instead, we train a (time-independent) neural 
-network for the physics and a (time-dependent) neural network for the score field.
 
