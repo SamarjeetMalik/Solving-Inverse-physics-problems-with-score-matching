@@ -4,11 +4,6 @@ This repository contains the ML implementaion for the paper "Solving Inverse Phy
 
 
 
-## Method Overview  
-<p align="center">
-  <img src="https://github.com/tum-pbs/SMDP/assets/16702943/cdf7b296-d1b1-4e55-be32-eb590003e7c0" width="90%" />
-</p>
-
 ## Installation and Requirements
 
 The code is written in Python 3.8 and tested with CUDA 11.4:
